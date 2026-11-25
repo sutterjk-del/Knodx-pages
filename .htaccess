@@ -1,0 +1,6 @@
+# Block public access to Git metadata and repo-only files
+RedirectMatch 404 /\.git
+<FilesMatch "^(README\.md|\.gitignore)$">
+  Require all denied
+</FilesMatch>
+Options -Indexes
